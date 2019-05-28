@@ -1,0 +1,9 @@
+*.o
+*.a
+mcmas
+parser/lex.yy.c
+parser/location.hh
+parser/nssis.cc
+parser/nssis.hh
+parser/position.hh
+parser/stack.hh
