@@ -154,6 +154,7 @@ SYNTAXCHECK	= parser/syntaxcheck
 UTILITIES	= utilities/utilities
 READ_OPTIONS = utilities/read_options
 SIMULATION	= utilities/simulation
+EMERGENCE	= utilities/emergence
 BDDORDER	= utilities/bddorder
 COMPUTEREACH	= utilities/computereach
 ARITHMETIC_EXPRESSION	= utilities/arithmetic_expression
@@ -209,7 +210,7 @@ cuddlibrary:
 
 
 
-OBJECTS = parser/lex.yy.o $(GRAMMAR).o $(READ_OPTIONS).o $(DRIVER).o $(SYNTAXCHECK).o $(UTILITIES).o $(SIMULATION).o $(BDDORDER).o $(COMPUTEREACH).o $(ARITHMETIC_EXPRESSION).o $(ASSIGNMENT).o $(ATOMIC_PROPOSITION).o $(BASIC_AGENT).o $(BASICTYPE).o $(BIT_EXPRESSION).o $(BOOL_EXPRESSION).o $(BOOL_VALUE).o $(ENUMERATE).o $(ENUM_VALUE).o $(EVOLUTION_LINE).o $(EXPRESSION).o $(FAIRNESS_EXPRESSION).o $(INT_VALUE).o $(LACTION).o $(LOGIC_EXPRESSION).o $(MODAL_FORMULA).o $(OBJECT).o $(PROTOCOL_LINE).o $(RANGEDINT).o $(TRANSITION).o $(VARIABLE).o $(ATLK).o $(MAIN_UTILS).o $(BUILD_MODEL).o $(EXPORT_MODEL).o $(MODEL_CHECKING).o
+OBJECTS = parser/lex.yy.o $(GRAMMAR).o $(READ_OPTIONS).o $(DRIVER).o $(SYNTAXCHECK).o $(UTILITIES).o $(SIMULATION).o $(EMERGENCE).o $(BDDORDER).o $(COMPUTEREACH).o $(ARITHMETIC_EXPRESSION).o $(ASSIGNMENT).o $(ATOMIC_PROPOSITION).o $(BASIC_AGENT).o $(BASICTYPE).o $(BIT_EXPRESSION).o $(BOOL_EXPRESSION).o $(BOOL_VALUE).o $(ENUMERATE).o $(ENUM_VALUE).o $(EVOLUTION_LINE).o $(EXPRESSION).o $(FAIRNESS_EXPRESSION).o $(INT_VALUE).o $(LACTION).o $(LOGIC_EXPRESSION).o $(MODAL_FORMULA).o $(OBJECT).o $(PROTOCOL_LINE).o $(RANGEDINT).o $(TRANSITION).o $(VARIABLE).o $(ATLK).o $(MAIN_UTILS).o $(BUILD_MODEL).o $(EXPORT_MODEL).o $(MODEL_CHECKING).o
 
 mcmas : $(OBJECTS) $(MAIN).cc $(CUDDLIBS)
 	$(CPP) $(CPPFLAGS) $(INCLUDE) $(CUDDLIBS) $(PTHREADLIB) $(OBJECTS) -o mcmas $(MAIN).cc
@@ -249,6 +250,9 @@ $(READ_OPTIONS).o: include/utilities.hh $(READ_OPTIONS).cc
 
 $(SIMULATION).o: include/utilities.hh include/types.hh $(SIMULATION).cc
 	$(CPP) $(CPPFLAGS) $(INCLUDE) -c $(SIMULATION).cc -o $(SIMULATION).o
+
+$(EMERGENCE).o: include/utilities.hh include/types.hh $(EMERGENCE).cc
+	$(CPP) $(CPPFLAGS) $(INCLUDE) -c $(EMERGENCE).cc -o $(EMERGENCE).o
 
 $(BDDORDER).o: include/utilities.hh include/types.hh $(BDDORDER).cc
 	$(CPP) $(CPPFLAGS) $(INCLUDE) -c $(BDDORDER).cc -o $(BDDORDER).o

@@ -107,6 +107,8 @@ void clear_cex(vector< vector< int >*>* countex, map< int, BDD * >* idbdd, vecto
 void delete_cex(vector< vector< int >*>* countex, map< int, BDD * >* idbdd, vector< vector< transition * >*>* cextr);
 void do_model_checking(bdd_parameters * para);
 
+void emergence(void *ptr);
+
 void
 print_banner(void)
 {
@@ -314,7 +316,12 @@ main(int argc, char *argv[])
   } else
     para->merge = 1;
 
-  if (options["simulation"] == 1)
+  if (options["emergence"] == 1) {
+    if (options["simulation"] == 1) {
+      cout << "Warning: Calculation of emergence threshold has overridden simulation option" << endl;
+    }
+    emergence(para);
+  } else if (options["simulation"] == 1)
     exec_simulation(para);
   else {
     BDD in_st = bddmgr->bddOne();

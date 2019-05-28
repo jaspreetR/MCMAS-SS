@@ -122,6 +122,8 @@ read_options(int argc, char *argv[]) {
   std::string bddgroup1("-g");
   std::string nobddcache("-nobddcache");
 
+  std::string emergence("-et");
+
   for (int i = 1; i < argc - 1; ++i) {
     if (binfo == argv[i] || binfo1 == argv[i]) {
       options["bdd_stats"] = 1;
@@ -254,6 +256,8 @@ read_options(int argc, char *argv[]) {
         cex_prefix += "/";
     } else if (nobddcache == argv[i]) {
       options["nobddcache"] = 1;
+    } else if (emergence == argv[i]) {
+      options["emergence"] = 1;
     } else {
       cout << NAME << " invalid option: " << argv[i] << endl;
       print_help();
