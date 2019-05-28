@@ -1,0 +1,294 @@
+Semantics=MultiAssignment;
+Agent Environment
+Obsvars : 
+env_val_1 : 1..5;
+env_val_2 : 1..5;
+env_val_3 : 1..5;
+env_val_4 : 1..5;
+env_val_5 : 1..5;
+env_val_false : boolean;
+env_val_true : boolean;
+end Obsvars 
+Vars : 
+dummy : boolean;
+end Vars 
+Actions = { go };
+Protocol : 
+(dummy = dummy) : { go };
+end Protocol
+Evolution : 
+end Evolution 
+end Agent
+
+Agent Robot__0
+Vars : 
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { go, stay };
+Protocol : 
+(pos = pos) : { go };
+end Protocol
+Evolution : 
+((pos = (pos + 1)) and (stopped = false)) if ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (pos < 4)));
+((pos = (pos + 1)) and (stopped = true)) if ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (pos = 4)));
+(pos = 5) if (pos = 5);
+end Evolution 
+end Agent
+
+Agent Robot__1
+Vars : 
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { go, stay };
+Protocol : 
+(pos = pos) : { go };
+end Protocol
+Evolution : 
+((pos = (pos + 1)) and (stopped = false)) if ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (pos < 4)));
+((pos = (pos + 1)) and (stopped = true)) if ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (pos = 4)));
+(pos = 5) if (pos = 5);
+end Evolution 
+end Agent
+
+Agent Robot__2
+Vars : 
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { go, stay };
+Protocol : 
+(pos = pos) : { go };
+end Protocol
+Evolution : 
+((pos = (pos + 1)) and (stopped = false)) if ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (pos < 4)));
+((pos = (pos + 1)) and (stopped = true)) if ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (pos = 4)));
+(pos = 5) if (pos = 5);
+end Evolution 
+end Agent
+
+Agent Abs__Robot__0
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (!(is_active = is_active));
+(is_active = false) if (!(!(is_active = is_active)));
+end Evolution 
+end Agent
+
+Agent Abs__Robot__1
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (!(is_active = is_active));
+(is_active = false) if (!(!(is_active = is_active)));
+end Evolution 
+end Agent
+
+Agent Abs__Robot__2
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (((!(Abs__Robot__0.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_1 < 4)))) or ((!(Abs__Robot__1.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_1 < 4)))));
+(is_active = false) if (!(((!(Abs__Robot__0.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_1 < 4)))) or ((!(Abs__Robot__1.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_1 < 4))))));
+end Evolution 
+end Agent
+
+Agent Abs__Robot__3
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (((!(Abs__Robot__0.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_1 = 4)))) or ((!(Abs__Robot__1.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_1 = 4)))));
+(is_active = false) if (!(((!(Abs__Robot__0.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_1 = 4)))) or ((!(Abs__Robot__1.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_1 = 4))))));
+end Evolution 
+end Agent
+
+Agent Abs__Robot__4
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (((!(Abs__Robot__2.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_2 < 4)))) or ((!(Abs__Robot__3.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_2 < 4)))));
+(is_active = false) if (!(((!(Abs__Robot__2.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_2 < 4)))) or ((!(Abs__Robot__3.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_2 < 4))))));
+end Evolution 
+end Agent
+
+Agent Abs__Robot__5
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (((!(Abs__Robot__2.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_2 = 4)))) or ((!(Abs__Robot__3.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_2 = 4)))));
+(is_active = false) if (!(((!(Abs__Robot__2.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_2 = 4)))) or ((!(Abs__Robot__3.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_2 = 4))))));
+end Evolution 
+end Agent
+
+Agent Abs__Robot__6
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (((!(Abs__Robot__4.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_3 < 4)))) or ((!(Abs__Robot__5.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_3 < 4)))));
+(is_active = false) if (!(((!(Abs__Robot__4.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_3 < 4)))) or ((!(Abs__Robot__5.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_3 < 4))))));
+end Evolution 
+end Agent
+
+Agent Abs__Robot__7
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (((!(Abs__Robot__4.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_3 = 4)))) or ((!(Abs__Robot__5.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_3 = 4)))));
+(is_active = false) if (!(((!(Abs__Robot__4.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_3 = 4)))) or ((!(Abs__Robot__5.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_3 = 4))))));
+end Evolution 
+end Agent
+
+Agent Abs__Robot__8
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (((!(Abs__Robot__0.Action = null)) and (Environment.env_val_1 = 5)) or (((!(Abs__Robot__2.Action = null)) and (Environment.env_val_2 = 5)) or (((!(Abs__Robot__4.Action = null)) and (Environment.env_val_3 = 5)) or (((!(Abs__Robot__6.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_4 < 4)))) or (((!(Abs__Robot__6.Action = null)) and (Environment.env_val_4 = 5)) or (((!(Abs__Robot__7.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_4 < 4)))) or ((!(Abs__Robot__8.Action = null)) and (Environment.env_val_5 = 5))))))));
+(is_active = false) if (!(((!(Abs__Robot__0.Action = null)) and (Environment.env_val_1 = 5)) or (((!(Abs__Robot__2.Action = null)) and (Environment.env_val_2 = 5)) or (((!(Abs__Robot__4.Action = null)) and (Environment.env_val_3 = 5)) or (((!(Abs__Robot__6.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_4 < 4)))) or (((!(Abs__Robot__6.Action = null)) and (Environment.env_val_4 = 5)) or (((!(Abs__Robot__7.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_4 < 4)))) or ((!(Abs__Robot__8.Action = null)) and (Environment.env_val_5 = 5)))))))));
+end Evolution 
+end Agent
+
+Agent Abs__Robot__9
+Vars : 
+is_active : boolean;
+pos : 1..5;
+stopped : boolean;
+end Vars 
+Actions = { null, go, stay, go__stay };
+Protocol : 
+((is_active = true) and (pos = pos)) : { go };
+(is_active = false) : { null };
+end Protocol
+Evolution : 
+(is_active = true) if (((!(Abs__Robot__1.Action = null)) and (Environment.env_val_1 = 5)) or (((!(Abs__Robot__3.Action = null)) and (Environment.env_val_2 = 5)) or (((!(Abs__Robot__5.Action = null)) and (Environment.env_val_3 = 5)) or (((!(Abs__Robot__6.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_4 = 4)))) or (((!(Abs__Robot__7.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_4 = 4)))) or (((!(Abs__Robot__7.Action = null)) and (Environment.env_val_4 = 5)) or ((!(Abs__Robot__9.Action = null)) and (Environment.env_val_5 = 5))))))));
+(is_active = false) if (!(((!(Abs__Robot__1.Action = null)) and (Environment.env_val_1 = 5)) or (((!(Abs__Robot__3.Action = null)) and (Environment.env_val_2 = 5)) or (((!(Abs__Robot__5.Action = null)) and (Environment.env_val_3 = 5)) or (((!(Abs__Robot__6.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_4 = 4)))) or (((!(Abs__Robot__7.Action = null)) and ((Environment.Action = go) and ((((((((((((((((((((((((Robot__0.Action = go) or (Robot__1.Action = go)) or (Robot__2.Action = go)) or (Abs__Robot__0.Action = go)) or (Abs__Robot__0.Action = go__stay)) or (Abs__Robot__1.Action = go)) or (Abs__Robot__1.Action = go__stay)) or (Abs__Robot__2.Action = go)) or (Abs__Robot__2.Action = go__stay)) or (Abs__Robot__3.Action = go)) or (Abs__Robot__3.Action = go__stay)) or (Abs__Robot__4.Action = go)) or (Abs__Robot__4.Action = go__stay)) or (Abs__Robot__5.Action = go)) or (Abs__Robot__5.Action = go__stay)) or (Abs__Robot__6.Action = go)) or (Abs__Robot__6.Action = go__stay)) or (Abs__Robot__7.Action = go)) or (Abs__Robot__7.Action = go__stay)) or (Abs__Robot__8.Action = go)) or (Abs__Robot__8.Action = go__stay)) or (Abs__Robot__9.Action = go)) or (Abs__Robot__9.Action = go__stay)) and (Environment.env_val_4 = 4)))) or (((!(Abs__Robot__7.Action = null)) and (Environment.env_val_4 = 5)) or ((!(Abs__Robot__9.Action = null)) and (Environment.env_val_5 = 5)))))))));
+end Evolution 
+end Agent
+
+Evaluation
+ended__Robot__0 if (Robot__0.pos = 5);
+ended__Robot__1 if (Robot__1.pos = 5);
+ended__Robot__2 if (Robot__2.pos = 5);
+abs_0 if (Abs__Robot__0.is_active = true);
+abs_1 if (Abs__Robot__1.is_active = true);
+abs_2 if (Abs__Robot__2.is_active = true);
+abs_3 if (Abs__Robot__3.is_active = true);
+abs_4 if (Abs__Robot__4.is_active = true);
+abs_5 if (Abs__Robot__5.is_active = true);
+abs_6 if (Abs__Robot__6.is_active = true);
+abs_7 if (Abs__Robot__7.is_active = true);
+abs_8 if (Abs__Robot__8.is_active = true);
+abs_9 if (Abs__Robot__9.is_active = true);
+end Evaluation
+
+InitStates
+(((Environment.env_val_5 = 5) and ((Environment.env_val_4 = 4) and ((Environment.env_val_3 = 3) and ((Environment.env_val_2 = 2) and ((Environment.env_val_1 = 1) and ((Environment.env_val_false = false) and ((Environment.env_val_true = true) and (Environment.dummy = true)))))))) and (((Robot__0.pos = 1) and (Robot__0.stopped = false)) and (((Robot__1.pos = 1) and (Robot__1.stopped = false)) and (((Robot__2.pos = 1) and (Robot__2.stopped = false)) and ((((Abs__Robot__0.pos = 1) and (Abs__Robot__0.stopped = false)) and ((Abs__Robot__0.is_active = false) or (Abs__Robot__0.is_active = true))) and ((((Abs__Robot__1.pos = 1) and (Abs__Robot__1.stopped = true)) and (Abs__Robot__1.is_active = false)) and ((((Abs__Robot__2.pos = 2) and (Abs__Robot__2.stopped = false)) and (Abs__Robot__2.is_active = false)) and ((((Abs__Robot__3.pos = 2) and (Abs__Robot__3.stopped = true)) and (Abs__Robot__3.is_active = false)) and ((((Abs__Robot__4.pos = 3) and (Abs__Robot__4.stopped = false)) and (Abs__Robot__4.is_active = false)) and ((((Abs__Robot__5.pos = 3) and (Abs__Robot__5.stopped = true)) and (Abs__Robot__5.is_active = false)) and ((((Abs__Robot__6.pos = 4) and (Abs__Robot__6.stopped = false)) and (Abs__Robot__6.is_active = false)) and ((((Abs__Robot__7.pos = 4) and (Abs__Robot__7.stopped = true)) and (Abs__Robot__7.is_active = false)) and ((((Abs__Robot__8.pos = 5) and (Abs__Robot__8.stopped = false)) and (Abs__Robot__8.is_active = false)) and ((((Abs__Robot__9.pos = 5) and (Abs__Robot__9.stopped = true)) and (Abs__Robot__9.is_active = false)) and ((Abs__Robot__0.is_active = true) or ((Abs__Robot__1.is_active = true) or ((Abs__Robot__2.is_active = true) or ((Abs__Robot__3.is_active = true) or ((Abs__Robot__4.is_active = true) or ((Abs__Robot__5.is_active = true) or ((Abs__Robot__6.is_active = true) or ((Abs__Robot__7.is_active = true) or ((Abs__Robot__8.is_active = true) or (Abs__Robot__9.is_active = true))))))))))))))))))))))));
+end InitStates
+
+Formulae
+(AF (AG (K(Robot__1, ended__Robot__0))));
+abs_0;
+abs_1;
+abs_2;
+abs_3;
+abs_4;
+abs_5;
+abs_6;
+abs_7;
+abs_8;
+abs_9;
+AF AG abs_0;
+AF AG abs_1;
+AF AG abs_2;
+AF AG abs_3;
+AF AG abs_4;
+AF AG abs_5;
+AF AG abs_6;
+AF AG abs_7;
+AF AG abs_8;
+AF AG abs_9;
+EF abs_0;
+EF abs_1;
+EF abs_2;
+EF abs_3;
+EF abs_4;
+EF abs_5;
+EF abs_6;
+EF abs_7;
+EF abs_8;
+EF abs_9;
+end Formulae
+

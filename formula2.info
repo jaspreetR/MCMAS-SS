@@ -1,0 +1,54 @@
+-- State 0 --
+  Agent Environment
+    state=none
+  Agent Sender
+    ack=false
+    bit=b1
+  Agent Receiver
+    state=empty
+
+-- State 1 --
+  Agent Environment
+    state=SR
+  Agent Sender
+    ack=false
+    bit=b1
+  Agent Receiver
+    state=r1
+
+-- State 2 --
+  Agent Environment
+    state=SR
+  Agent Sender
+    ack=true
+    bit=b1
+  Agent Receiver
+    state=r1
+
+-- State 3 --
+  Agent Environment
+    state=S
+  Agent Sender
+    ack=true
+    bit=b1
+  Agent Receiver
+    state=r1
+
+-- State 4 --
+  Agent Environment
+    state=SR
+  Agent Sender
+    ack=true
+    bit=b1
+  Agent Receiver
+    state=r1
+
+-- State 5 --
+  Agent Environment
+    state=S
+  Agent Sender
+    ack=false
+    bit=b1
+  Agent Receiver
+    state=r1
+

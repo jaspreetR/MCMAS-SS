@@ -1,0 +1,13 @@
+digraph counterexample1 {
+ 0 [label="0",shape=ellipse]
+ 1 [label="1",shape=ellipse]
+ 2 [label="2",shape=ellipse]
+ 3 [label="3",shape=ellipse]
+ 4 [label="4",shape=ellipse]
+ 5 [label="5",shape=ellipse]
+    0 -> 1[label="<SR;sb1;nothing>"]
+    1 -> 2[label="<SR;sb1;sendack>"]
+    2 -> 3[label="Sender", arrowhead=none, style=dotted]
+    3 -> 4[label="Receiver", arrowhead=none, style=dotted]
+    3 -> 5[label="Receiver", arrowhead=none, style=dotted]
+}

@@ -1,0 +1,44 @@
+-- The Bit transmission problem in ISPL ( from Fagin et al., Reasoning
+-- about knowledge, 1995).
+-- Basic case, no faulty behaviour for Receiver.
+Semantics = MultiAssignment;
+Agent Environment
+  Vars:
+    i : 1..3;
+  end Vars
+  Actions = {forward, backward, none};
+  Protocol: 
+    Other: {forward, backward};
+  end Protocol
+  Evolution:
+    (i = i + 1) if (Action=forward and i < 3);
+    (i = i - 1) if (Action=backward and i > 1);
+  end Evolution
+end Agent
+
+Agent TestAgent 
+  Vars:
+    i : 1..3;
+  end Vars
+  Actions = {forward, backward, none};
+  Protocol: 
+    Other: {forward, backward};
+  end Protocol
+  Evolution:
+    (i = i + 1) if (TestAgent.Action=forward and i < 3);
+    (i = i - 1) if (TestAgent.Action=backward and i > 1);
+  end Evolution
+end Agent
+
+
+Evaluation
+  same if Environment.i = TestAgent.i;
+end Evaluation
+
+InitStates
+  Environment.i = TestAgent.i;
+end InitStates
+
+Formulae
+  AG AF same;
+end Formulae
