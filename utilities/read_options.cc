@@ -83,6 +83,8 @@ read_options(int argc, char *argv[]) {
   options["counter"] = 10;
   options["newpo"] = 0;
   options["uniform"] = 0;
+  options["emergence"] = 0;
+  options["temporaldepth"] = 0;
 
   bool wrongpara = false;
 
@@ -258,6 +260,11 @@ read_options(int argc, char *argv[]) {
       options["nobddcache"] = 1;
     } else if (emergence == argv[i]) {
       options["emergence"] = 1;
+      options["temporaldepth"] = atoi(argv[++i]);
+      if (options["temporaldepth"] <= 0) {
+        cout << "Parameter " << options["temporaldepth"] << " is not allowed in -et option." << endl;
+        wrongpara = true;
+      }
     } else {
       cout << NAME << " invalid option: " << argv[i] << endl;
       print_help();

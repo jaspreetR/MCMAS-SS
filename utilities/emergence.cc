@@ -47,6 +47,119 @@ extern map<string, map<string, vector<BDD*>* >* >* integer_variable_BDDs(Cudd * 
 extern void clear_integer_BDDs(map<string, map<string, vector<BDD*>* >* >* int_vars);
 extern BDD complete_integer_BDDs(Cudd * bddmgr, vector<BDD> * v, BDD a, map<string, map<string, vector<BDD*>* >* >* int_vars);
 
+// returns next valid minterm and inserts corresponding string into statehash 
+BDD get_next_minterm(BDD& states, set<string>& statehash, bdd_parameters* para) {
+  while (states != para->bddmgr->bddZero()) {
+    auto next = states.PickOneMinterm(*para->v);
+    states = states - next;
+    if (is_valid_state(next, *para->v)) {
+      string state = state_to_str(next, *para->v);
+      auto result = statehash.insert(state);
+      bool new_element_inserted = result.second;
+      if (new_element_inserted) {
+        return next;
+      }
+    }
+  }
+
+  return para->bddmgr->bddZero();
+}
+
+// checks for cycles of n repetitions in the stack
+bool has_cycles(const vector<string>& states, int num_cycles) {
+  int num_states = states.size();
+  int max_cycle_size = states.size() / num_cycles;
+
+  for (int cycle_size = 1; cycle_size <= max_cycle_size; ++cycle_size) {
+    bool equal = true;
+
+    for (int offset = 0; offset < cycle_size; ++offset) {
+      const string& first_cycle_elem = states[num_states - offset - 1];
+
+      for (int index = 1; index < num_cycles; ++index) {
+        if (first_cycle_elem != states[num_states - index * cycle_size - offset - 1]) {
+          equal = false;
+          break;
+        }
+      }
+
+      if (!equal) {
+        break;
+      }
+    }
+
+    if (equal) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+int find_tree_depth(int temporaldepth, const BDD& initial_state,
+                    bdd_parameters* para) {
+  
+  int currentdepth = 0;
+  int maxdepth = 0;
+
+  vector<BDD> stack = {initial_state};
+  vector<string> prevstates = {};
+  vector<set<string>> prevstatehashes = {set<string>()};
+
+  bool check = true;
+  while (!stack.empty()) {
+    auto& current = stack.back();
+
+    if (current == para->bddmgr->bddZero()) {
+      stack.pop_back();
+      if (!prevstates.empty()) {
+        prevstates.pop_back();
+      }
+      prevstatehashes.pop_back();
+      --currentdepth;
+      continue;
+    }
+
+    auto& currentstatehash = prevstatehashes.back();
+    auto next_state = get_next_minterm(current, currentstatehash, para);
+
+    if (next_state == para->bddmgr->bddZero()) {
+      stack.pop_back();
+      prevstatehashes.pop_back();
+      if (!prevstates.empty()) {
+        prevstates.pop_back();
+      }
+      --currentdepth;
+      continue;
+    }
+
+    auto state_string = state_to_str(next_state, *para->v);
+    //cout << state_string << endl << "///" << endl;
+    prevstates.emplace_back(std::move(state_string));
+
+    if (has_cycles(prevstates, temporaldepth + 1)) {
+      prevstates.pop_back();
+      continue;
+    }
+
+    auto newstates = next_state; 
+    for (auto& transition : *para->vRT) {
+      newstates *= transition;
+    }
+
+    newstates = Exists(para->bddmgr, para->v, newstates);
+    newstates = newstates.SwapVariables(*para->v, *para->pv);
+    newstates = Exists(para->bddmgr, para->a, newstates);
+
+    stack.emplace_back(std::move(newstates));
+    prevstatehashes.emplace_back(set<string>());
+    ++currentdepth;
+    maxdepth = std::max(maxdepth, currentdepth);
+  }
+
+  return maxdepth;
+}
+
 void emergence(void *ptr) {
   bdd_parameters *para;
   para = (bdd_parameters *)ptr;
@@ -99,6 +212,21 @@ void emergence(void *ptr) {
       }
     }
   }
+
+  if (count==MAXINISTATES && is != bddmgr->bddZero())
+    std::cout << "There are too many initial states. Please specify more initial values."
+          << std::endl;
+
+  int temporaldepth = options["temporaldepth"];
+  int maxdepth = 0;
+  for (auto& inistate : inistates) {
+    int current_maxdepth = find_tree_depth(temporaldepth, inistate, para);
+    maxdepth = std::max(current_maxdepth, maxdepth);
+  }
+
+  cout << "The depth of the corresponding computation tree is " << maxdepth << endl;
+
+  /*
   if(options["quiet"] == 0) {
     if (count==MAXINISTATES && is != bddmgr->bddZero())
       cout << "There are too many initial states. Please specify more initial values."
@@ -419,5 +547,6 @@ void emergence(void *ptr) {
       }
     }
   }
+  */
   clear_integer_BDDs(int_vars);
 }
