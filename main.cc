@@ -570,7 +570,7 @@ main(int argc, char *argv[])
     in_st = reach = para->bddmgr->bddZero();
     delete satisfied;
   }
- clearmemory:
-  free_mcmas_memory(para);
-  free_cudd_memory(para);
+ //clearmemory:
+  //free_mcmas_memory(para);
+  //free_cudd_memory(para);
 }
