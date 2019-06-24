@@ -1,6 +1,7 @@
 #ifndef UTILITIES_HH
 # define UTILITIES_HH
 #include <vector>
+#include <tuple>
 #include <cmath>
 #include "types.hh"
 #include "cuddObj.hh"
@@ -106,6 +107,12 @@ extern void print_state(BDD state, vector<BDD> v);
 extern void print_states(BDD states, vector<BDD> v, Cudd* bddmgr);
 extern void print_action(BDD state, vector<BDD> a);
 extern string state_to_str(BDD state, vector<BDD> v);
+
+extern string nometa_state_to_str(BDD state, vector<BDD> v);
+
+// calculates out component of prev local states and in component of next local states
+extern pair<vector<int>, vector<int>> calculate_out_ins(BDD state, vector<BDD> v); 
+
 extern BDD append_variable_BDDs(Cudd * bddmgr, vector<BDD> * v, BDD a);
 extern int export_model(bdd_parameters * para, BDD *is, vector< vector< int >*> *countex, map< int, BDD * > *idbdd, vector< vector< transition * >*> *cextr);
 extern void print_cex(bdd_parameters * para, string fname, string str_head, map< int, BDD * > *idbdd, vector< vector< transition * >*> *cextr);

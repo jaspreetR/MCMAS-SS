@@ -617,6 +617,8 @@ public:
   bool is_valid_action(BDD state, vector<BDD> a);
   void print_stateXML(ofstream * myfile, BDD state, vector<BDD> v);
   string state_to_str(BDD state, vector<BDD> v);
+  string nometa_state_to_str(BDD state, vector<BDD> v);
+  void record_out_ins(BDD state, vector<BDD> v, int current_id, vector<int>& outs, vector<int>& ins);
   string action_to_str(BDD state, vector<BDD> v);
 	basictype *get_var_def(string varname);
 

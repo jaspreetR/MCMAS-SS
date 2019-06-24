@@ -78,6 +78,51 @@ state_to_str(BDD state, vector<BDD> v)
   return s.str();
 }
 
+string
+nometa_state_to_str(BDD state, vector<BDD> v)
+{
+  ostringstream s;
+  string agent_prefix = "Abs__";
+
+  for (unsigned int i = 0; i < agents->size(); i++) {
+    auto name = (*agents)[i]->get_name();
+    s << "  Agent " << name << "\n";
+    if (name.substr(0, agent_prefix.size()) == agent_prefix) {
+      s << (*agents)[i]->nometa_state_to_str(state, v);
+    } else {
+      s << (*agents)[i]->state_to_str(state, v);
+    }
+
+  }
+  return s.str();
+}
+
+// should not be calculated for initial state in path
+pair<vector<int>, vector<int>>
+calculate_out_ins(BDD state, vector<BDD> v)
+{
+  string agent_prefix = "Abs__";
+  std::vector<basic_agent*> abstract_agents;
+
+  for (auto* agent : *agents) {
+    auto name = agent->get_name();
+    if (name.substr(0, agent_prefix.size()) == agent_prefix) {
+      abstract_agents.push_back(agent);
+    }
+  }
+
+  vector<int> outs(abstract_agents.size());
+  vector<int> ins(abstract_agents.size());
+
+  for (size_t i = 0; i < abstract_agents.size(); ++i) {
+    auto* agent = abstract_agents[i];
+    agent->record_out_ins(state, v, i, outs, ins);
+  }
+  //cout << "///////////" << endl;
+
+  return make_pair(outs, ins);
+}
+
 bool
 find_same_state(map< string, int >*statehash, string state)
 {

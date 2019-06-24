@@ -809,6 +809,47 @@ basic_agent::state_to_str(BDD state, vector<BDD> v)
 }
 
 string
+basic_agent::nometa_state_to_str(BDD state, vector<BDD> v)
+{
+  string meta_prefix = "from_";
+
+  ostringstream s;
+  if (obsvars != NULL)
+    for (map< string, basictype * >::iterator i = obsvars->begin();
+         i != obsvars->end(); i++) {
+      s << "    " << i->second->state_to_str(state, v) << "\n";
+    }
+  if (vars != NULL)
+    for (map< string, basictype * >::iterator i = vars->begin();
+         i != vars->end(); i++) {
+      if (i->second->get_name().substr(0, meta_prefix.size()) != meta_prefix) {
+        auto var = i->second->state_to_str(state, v);
+        s << "    " << var << "\n";
+      }
+    }
+  return s.str();
+}
+
+void
+basic_agent::record_out_ins(BDD state, vector<BDD> v, int current_id, vector<int>& outs, vector<int>& ins) {
+  string meta_prefix = "from_";
+
+  for (map< string, basictype * >::iterator i = vars->begin();
+        i != vars->end(); i++) {
+    auto var_name = i->second->get_name();
+    if (var_name.substr(0, meta_prefix.size()) == meta_prefix) {
+      auto prev_agent_id_string = var_name.substr(meta_prefix.size(), std::string::npos);
+      auto prev_agent_id = stoi(prev_agent_id_string); 
+      if (state <= v[i->second->get_index_begin()]) {
+        ins[current_id]++;
+        outs[prev_agent_id]++;
+      }
+    }
+  }
+
+}
+
+string
 basic_agent::action_to_str(BDD state, vector<BDD> a)
 {
   ostringstream s;
