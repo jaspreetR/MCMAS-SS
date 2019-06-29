@@ -70,7 +70,7 @@ BDD get_next_minterm(BDD& states, set<string>& statehash, bdd_parameters* para) 
 // checks for cycles of n repetitions in the stack
 bool has_cycles(const vector<string>& states, int num_cycles) {
   int num_states = states.size();
-  int max_cycle_size = (states.size() - 1) / num_cycles; //TODO possible off by one error
+  int max_cycle_size = (states.size() - 1) / num_cycles; 
 
   for (int cycle_size = 1; cycle_size <= max_cycle_size; ++cycle_size) {
     bool equal = true;
@@ -245,7 +245,6 @@ void emergence(void *ptr) {
     is = is - inistates[count];
     if (is_valid_state(inistates[count], *v)) {
       string state = nometa_state_to_str(inistates[count], *v);
-      cout << state << endl;
       if(!find_same_state(&statehash, state)) {
         statehash[state] = 1;
         count++;
