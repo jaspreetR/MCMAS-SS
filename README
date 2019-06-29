@@ -1,26 +1,9 @@
-/* ************************************************************************
- *            MCMAS -- Model Checker for Multi-Agent Systems
- *
- *     Copyright (C) 2007-2017
- *     Jeremy Kong, Alessio Lomuscio, Hongyang Qu and Franco Raimondi
- *     This program is free software; you can redistribute it and/or modify
- *     it under the terms of the GNU General Public License as published by
- *     the Free Software Foundation; either version 2 of the License, or
- *     (at your option) any later version.
- *     This program is distributed in the hope that it will be useful,
- *     but WITHOUT ANY WARRANTY; without even the implied warranty of
- *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *     GNU General Public License for more details.
- * 
- *   You should have received a copy of the GNU General Public License
- *   along with this program; if not, write to the Free Software
- *   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
- *
- **************************************************************************/
+Modified version of MCMAS model checker.
+Original version found at https://vas.doc.ic.ac.uk/software/mcmas/
 
-Please see the documents available under the doc/ directory.
-In particular:
-- doc/installation_guide.pdf provides installation instructions;
-- doc/manual.pdf provides a user manual.
+This project can be built with a C++17 compiler using the "make" command in the command line.
 
-Please contact mcmas@doc.ic.ac.uk for further information.
+This version of MCMAS can generate an emergence threshold of a given abstract model with meta data 
+(from the transpiler https://github.com/jaspreetR/MCMAS-Extension) using the "-et <number>" option
+where the given number is the temporal depth of the formula to be evaluated e.g. 
+./mcmas -et 2 abstract_model.ispl
